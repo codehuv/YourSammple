@@ -1,0 +1,19 @@
+.information-box{
+    background-color:rgb(230, 230, 230);
+    width:100%;
+    /* padding:20px 5px 10px 5px; */
+}
+
+.information-box ul{
+    list-style-type: '\2713';
+}
+
+.information-box a:link{
+    color:rgb(4, 207, 92);
+    text-decoration:none;
+}
+
+.information-box a:visited{
+    color:rgb(4, 207, 92);
+    text-decoration:none;
+}

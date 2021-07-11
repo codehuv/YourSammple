@@ -1,0 +1,119 @@
+<!DOCTYPE html> 
+<html lang="ko">
+<head>
+    <title>통신비 계산</title>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="/css/bill.css">
+</head>
+<body>
+  <div id="container">
+    <H1>통신비 계산</H1>
+        <form>
+        <p>1. 스마트폰을 선택하세요.
+            <p>
+            <select id="device">
+            <option disabled selected value="none">------------- 스마트폰 선택 -------------</option>
+            <option disabled selected value="none">------------- 삼성  -------------</option>
+            <option disabled selected value="none">----------- 5G  -----------</option>
+            <option id="sam501" value="449900">갤럭시 A51</option>
+            <option id="sam502" value="1248500">갤럭시 S20</option>
+            <option id="sam503" value="899800">갤럭시 S20 FE</option>
+            <option id="sam504" value="1298000">갤럭시 S20 Ultra</option>
+            <option id="sam505" value="1353000">갤럭시 S20+</option>
+            <option id="sam506" value="999000">갤럭시 S21</option>
+            <option id="sam507" value="1452000">갤럭시 S21 Ultra </option>
+            <option id="sam508" value="1199000">갤럭시 S21+</option>
+            <option id="sam509" value="1349700">갤럭시 Z플립 5G</option>
+            <option id="sam510" value="1110000">갤럭시 노트20</option>
+            <option id="sam511" value="1452000">갤럭시 노트20 Ultra</option>
+            <option id="sam512" value="1892000">갤럭시 폴드2</option>
+            <option disabled selected value="none">----------- 4G  -----------</option>
+            <option id="sam401" value="275000">갤럭시 A12</option>
+            <option id="sam402" value="297000">갤럭시 A21s</option>
+            <option id="sam403" value="374000">갤럭시 A31</option>
+            <option id="sam404" value="374000">갤럭시 A32</option>
+            <option disabled selected value="none">------------- 애플  -------------</option>
+            <option disabled selected value="none">----------- 5G  -----------</option>
+            <option id="app501" value="1090000">아이폰 12</option>
+            <option id="app502" value="1350000">아이폰 12 Pro</option>
+            <option id="app503" value="1490000">아이폰 12 Pro Max</option>
+            <option id="app504" value="950000">아이폰 12 Mini</option>
+            <option disabled selected value="none">----------- 4G  -----------</option>
+            <option id="app401" value="850000">아이폰 11</option>
+            <option id="app402" value="550000">아이폰 SE2</option>
+            <option disabled selected value="none">------------- LG  -------------</option>
+            <option disabled selected value="none">----------- 5G  -----------</option>
+            <option id="lge501" value="499400">LG Q92</option>
+            <option id="lge502" value="1098900">LG WING</option>
+            <option id="lge503" value="899800">LG VELVET</option>
+          </select>
+
+        <p>
+        <p>2. 요금제를 선택하세요.
+          <p>
+            <select id="billamount">
+          <option disabled selected value="none">------------- 요금제 선택 -------------</option>
+          <option disabled selected value="none">------------- SKT  -------------</option>
+          <option disabled selected value="none">----------- 5G  -----------</option>
+          <option id="skt501" value="55000">5GX 슬림</option>
+          <option id="skt502" value="75000">5GX 스탠다드</option>
+          <option id="skt503" value="89000">5GX 프라임</option>
+          <option id="skt504" value="125000">5GX 플래티넘</option>
+          <option disabled selected value="none">----------- 4G  -----------</option>
+          <option id="skt401" value="33000">T플랜 세이브</option>
+          <option id="skt402" value="43000">T플랜 안심2.5G</option>
+          <option id="skt403" value="50000">T플랜 안심4G</option>
+          <option id="skt404" value="69000">T플랜 에센스</option>
+          <option id="skt405" value="79000">T플랜 스페셜</option>
+          <option id="skt406" value="100000">T플랜 맥스</option>
+          <option disabled selected value="none">------------- KT  -------------</option>
+          <option disabled selected value="none">----------- 5G  -----------</option>
+          <option id="kt501" value="55000">5G 슬림</option>
+          <option id="kt502" value="80000">슈퍼플랜 베이직</option>
+          <option id="kt503" value="100000">슈퍼플랜 스페셜</option>
+          <option id="kt504" value="130000">슈퍼플랜 프리미엄 초이스</option>
+          <option disabled selected value="none">----------- 4G  -----------</option>
+          <option id="kt401" value="33000">LTE 베이직</option>
+          <option id="kt402" value="49000">데이터ON 톡</option>
+          <option id="kt403" value="69000">데이터ON 비디오</option>
+          <option id="kt404" value="89000">데이터ON 프리미엄</option>
+          <option disabled selected value="none">------------- LG U+  -------------</option>
+          <option disabled selected value="none">----------- 5G  -----------</option>
+          <option id="lgt501" value="55000">5G 라이트</option>
+          <option id="lgt502" value="75000">5G 스탠다드</option>
+          <option id="lgt503" value="85000">5G 스마트</option>
+          <option id="lgt504" value="105000">5G 플러스</option>
+          <option id="lgt505" value="130000">5G 시그니처</option>
+          <option disabled selected value="none">----------- 4G  -----------</option>
+          <option id="lgt401" value="33000">LTE 데이터33</option>
+          <option id="lgt402" value="44000">추가 요금 걱정 없는 데이터 44</option>
+          <option id="lgt403" value="59000">추가 요금 걱정 없는 데이터 59</option>
+          <option id="lgt404" value="69000">추가 요금 걱정 없는 데이터 69</option>
+          <option id="lgt405" value="78000">속도 용량 걱정 없는 데이터 78</option>
+          <option id="lgt406" value="88000">속도 용량 걱정 없는 데이터 88</option>
+          <option id="lgt407" value="105000">LTE 프리미어 플러스</option>
+      </select>
+      <p>
+      <p>3. 약정개월수를 선택하세요.
+        <p>
+          <select id="dividemonth">
+        <option disabled selected value="none">------------- 약정개월수 선택 -------------</option>
+        <option value="12">12개월</option>
+        <option value="24">24개월</option>
+        <option value="30">30개월</option>
+        <option value="36">36개월</option>
+    </select>
+    <p>
+      <br>
+      <button type="button" id="result">통신기 계산하기</button>
+    </form>
+  <script type="text/javascript" src="/js/bill.js"></script>
+  <div id="subtext">
+
+    기기와 요금제, 약정 개월 수에 따라 나오는 월 요금을 계산해주는 페이지입니다. 
+    <br>또한 공시지원금으로 기기를 구매했을때와 선택약정으로 기기를 구매했을때를 비교해 어느쪽으로 기기를 구매하는 것이 더 좋은지 알려주는 페이지입니다.
+    <br>기기의 통신망(5G, 4G)에 따라 알맞는 요금제를 선택해야 결과가 정상적으로 나옵니다.
+    <br>
+    <br><div id="made">made by Jinho Kim</div>
+  </div>
+  </div>
